@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Registration page </title>
+    <link href="../static/css/stylesheet.css" th:href="@{/css/stylesheet.css}" rel="stylesheet" />
+
+</head>
+<body>
+<div class="topnav">
+    <a th:href="@{home}">Home</a>
+    <a class="active" th:href="@{hello}">Sign in</a>
+    <a th:href="@{pasta}">Pasta</a>
+    <a th:href="@{viwus}">Viwus</a>
+    <div class="dropdown">
+        <button class="dropbtn">Even more
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a th:href="@{nikodem}">Nikodem</a>
+            <a href="#">don't do it</a>
+            <a href="#">it's not too late</a>
+        </div>
+    </div>
+</div>
+    <div class="container">
+
+    <div th:if="${param.error}">
+    Invalid username and password.
+</div>
+
+<form th:action="@{/register}"  method="POST" >
+    <div><label for="username"> Username : <input type="text" id="username" name="username"/> </label></div>
+    <div><label for="password"> Password: <input type="password" id="password" name="password"/> </label></div>
+    <div><input type="submit" value="sign up"/></div>
+</form>
+<div class="footer">
+    <p>I am a footer lmao</p>
+</div>
+</div>
+</body>
+</html>

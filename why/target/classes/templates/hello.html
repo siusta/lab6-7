@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Totally legit site with authentication and stuff</title>
+    <link href="../static/css/stylesheet.css" th:href="@{/css/stylesheet.css}" rel="stylesheet" />
+</head>
+<body>
+<div class="topnav">
+    <a th:href="@{home}">Home</a>
+    <a th:href="@{hello}">Sign in</a>
+    <a th:href="@{pasta}">Pasta</a>
+    <a th:href="@{viwus}">Viwus</a>
+    <div class="dropdown">
+        <button class="dropbtn">Even more
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a th:href="@{nikodem}">Nikodem</a>
+            <a href="#">why</a>
+            <a href="#">hello there</a>
+        </div>
+    </div>
+</div>
+<div class="header" id="myHeader">
+    <h2>Greetings!</h2>
+</div>
+<h1 th:inline="text">hello [[${#httpServletRequest.remoteUser}]] :3</h1>
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
+<div class="footer">
+    <p>I am a footer lmao</p>
+</div>
+</body>
+</html>

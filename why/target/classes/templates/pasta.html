@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>ave</title>
+	<link href="../static/css/stylesheet.css" th:href="@{/css/stylesheet.css}" rel="stylesheet" />
+</head>
+<body>
+<div class="topnav">
+	<a th:href="@{home}">Home</a>
+	<a th:href="@{hello}">Sign in</a>
+	<a class = "active" th:href="@{pasta}">Pasta</a>
+	<a th:href="@{viwus}">Viwus</a>
+	<div class="dropdown">
+		<button class="dropbtn">Even more
+			<i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+			<a th:href="@{nikodem}">Nikodem</a>
+			<a href="#">ceasar did</a>
+			<a href="#">nothing wrong</a>
+		</div>
+</div>
+<button type="button" class="collapsible">Cato</button>
+<div class="content">
+ <p>
+	An optimate senator was performing an oration in the forum.<br>
+
+	“Before I begin you must each of you, fall to your knees and praise Cato the Younger the most virtuous stoic and greatest of the roman patricians”<br>
+
+	At that instant an elderly soldier, who by his own merit and valor in the spanish and gallic campaigns had risen to the rank of Primus Pilus of X Legio and had never once questioned the judgment of his Imperator, Gaius Julius Caesar completely understanding the necessity of barbarian pacification, pushed his way through the crowd to speak<br>
+
+	“Tell me, who is the greatest of the Romans?” <br>
+
+	“Cato you senile pleb” <br>
+
+	“Wrong its Gaius Julius Caesar the direct descendant of Venus and Aeneas. If it was Cato as you say...wouldn't he have held consular imperium?” <br>
+
+	The senator was visibly taken aback, immediately dropping his letter from Cicero He ran away crying those optimate crocodile tears. The same tears Cato wept when Caesar read aloud the erotic love letter Servilia had written him. The entire crowd applauded and immediately surrounded the soldier as he read aloud the latest edition to the gallic commentaries. A dove called “Victrix” perched itself atop the temple of Janus as Caesars eternal allies Publius Licinius Crassus and Gnaeus Pompeius Magnus were elected to the consulship. The optimate senator was later found and had manure dumped upon him while his wife and slaves watched.<br>
+
+	<b>AVE CAESAR VICTOR IMPERATOR</b><br>
+  </p>
+</div>
+<button type="button" class="collapsible">Paul</button>
+<div class="content">
+<p>
+		A gallilean philosopher and ex-slave was teaching a class on Paul, known Christian.
+	</p>
+	<blockquote>
+		"Before the class begins, you must get on your knees and worship Jesus Christ and accept that he is the greatest deity ever, even greater than Jupiter Optimus Maximus!"
+	</blockquote>
+	<p>
+		At this moment, a brave, patriotic, Centurion who had served 30 years duty and worshiped the Emperor every day stood up.
+	</p>
+	<blockquote>
+		"Who is the son of god ?"
+	</blockquote>
+	<p>
+		The arrogant philosopher smirked quite Jewishly and smugly replied "Jesus Christ, you stupid pagan"
+	</p>
+	<blockquote>
+		"Wrong. It’s Augustus Caesar. If It was Jesus Christ as you say It, why hasn't he conquered anything and died on the Cross ? Surely a powerful god such as yours would favor his son"
+	</blockquote>
+	<p>
+		The philosopher was visibly shaken, and dropped his chalk and copy of the Gospel of Luke. He stormed out of the room crying those Jewish crocodile tears. The same tears Christians cry for the conquered Gauls and Britons (who today live in such luxury that most even visit baths every week) when they jealously try to claw justly earned riches from the deserving legionaries.
+	</p>
+	<p>
+		The students applauded and all joined the legions that day and accepted the emperor as their lord and savior. An eagle flew into the room and perched atop the SPQR symbol and shed a tear on the chalk. The 12 tablets were read several times, and the Emperor himself showed up and sentenced all Christians to die in the Flavian Amphitheatre.
+	</p>
+	<p>
+		The philosopher lost his tenure and was sent to the lions the next day. He died with a thunderous applause and was tossed into Tartarus for all eternity.
+	</p>
+	<p>
+		Ave, true, to Caesar
+	</p>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+<div class="footer">
+  <p>I am a footer lmao</p>
+</div>
+</body>
+
+
+</html>
